@@ -11,11 +11,11 @@ export const styles = StyleSheet.create({
 		aspectRatio: isBigScreen ? 7.38 / 16 : undefined,
 		justifyContent: "flex-start",
 		alignItems: "center",
-		padding: spacing[5],
+		padding: spacing[2],
 	},
 	title: {
-		paddingVertical: spacing[3],
-		marginBottom: spacing[2],
+		paddingVertical: spacing[2],
+		paddingBottom: spacing[6],
 	},
 	page1: {
 		justifyContent: "flex-end",
@@ -30,11 +30,12 @@ export const styles = StyleSheet.create({
 		zIndex: -1,
 	},
 	cardIdentity: {
-		paddingVertical: spacing[5],
+		paddingVertical: spacing[2],
 		width: "100%",
 		alignItems: "center",
 		borderRadius: radius[1],
 		borderWidth: 1,
+		marginBottom: spacing[4],
 	},
 	identityImage: {
 		height: "50%",
@@ -46,7 +47,7 @@ export const styles = StyleSheet.create({
 	},
 	timelineCard: {
 		borderRadius: radius[1],
-		marginBottom: spacing[3],
+		marginBottom: spacing[2],
 		borderWidth: 1,
 		overflow: "hidden",
 	},
@@ -72,7 +73,7 @@ export const styles = StyleSheet.create({
 		marginBottom: spacing[3],
 	},
 	linkCard: {
-		padding: spacing[2],
+		padding: spacing[1],
 		marginRight: spacing[2],
 		borderRadius: radius[1],
 		borderWidth: 1,
@@ -82,23 +83,26 @@ export const styles = StyleSheet.create({
 	},
 	skillCard: {
 		width: "49%",
+		minHeight: 180,
 		padding: spacing[2],
 		borderRadius: radius[1],
 		marginBottom: spacing[3],
-		borderWidth: 1,
+		borderWidth: 2,
+		aspectRatio: 1 / 1,
 	},
 	skillImage: {
 		width: "70%",
-		aspectRatio: 1 / 1,
+		height: undefined,
 		borderRadius: radius[2],
 		alignSelf: "center",
+		aspectRatio: 1 / 1,
 	},
 	contactContainer: {
 		width: "100%",
 		flexDirection: "row",
 		alignItems: "center",
 		marginBottom: spacing[3],
-		borderWidth: 1,
+		borderWidth: 2,
 		borderRadius: radius[1],
 		paddingHorizontal: spacing[2],
 		justifyContent: "space-between",
@@ -111,9 +115,12 @@ export const styles = StyleSheet.create({
 		justifyContent: "center",
 		alignItems: "center",
 	},
-	contactCard: {
+	contactCardText: {
 		flex: 1,
 		padding: spacing[3],
 		margin: spacing[3],
+	},
+	contactCardIcon: {
+		alignSelf: "flex-end",
 	},
 });

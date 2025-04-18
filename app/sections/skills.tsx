@@ -1,3 +1,4 @@
+import { ThemedIcon } from "@/components/ThemedIcon";
 import { ThemedText } from "@/components/ThemedText";
 import { ThemedView } from "@/components/ThemedView";
 import { useData } from "@/hooks/useData";
@@ -19,16 +20,28 @@ const Skills = () => {
 				}}
 			>
 				{skills.map((item, index) => (
-					<ThemedView style={styles.skillCard} key={index}>
+					<ThemedView
+						style={[styles.skillCard, { borderColor: item.color }]}
+						key={index}
+					>
 						<ThemedView style={{ flex: 1 }}>
 							<ThemedText type="subtitle">{item.name}</ThemedText>
 							<ThemedText type="caption">{item.level} level</ThemedText>
 						</ThemedView>
-						<Image
-							resizeMode="stretch"
-							source={{ uri: item.icon }}
-							style={styles.skillImage}
-						/>
+						{item.localIcon ? (
+							<ThemedIcon
+								name={item.localIcon}
+								size={100}
+								style={styles.skillImage}
+								color={item.color}
+							/>
+						) : (
+							<Image
+								resizeMode="stretch"
+								source={{ uri: item.icon }}
+								style={styles.skillImage}
+							/>
+						)}
 					</ThemedView>
 				))}
 			</ThemedView>

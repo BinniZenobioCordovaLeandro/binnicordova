@@ -4,38 +4,32 @@ import { ThemedView } from "@/components/ThemedView";
 import { useData } from "@/hooks/useData";
 import { styles } from "@/styles";
 import { Link } from "expo-router";
-import { View } from "react-native";
 
 const Contact = () => {
 	const { contacts } = useData();
 	return (
 		<ThemedView style={[styles.page, styles.page4]} key="4">
 			<ThemedText type="title" style={styles.title}>
-				Contact
+				Contact me
 			</ThemedText>
 			{contacts.map((item, index) => (
-				<ThemedView style={styles.contactContainer} key={index}>
-					<>
-						<View
-							style={[styles.contactCircle, { backgroundColor: item.color }]}
-						>
-							<ThemedText
-								type="title"
-								style={{
-									color: "white",
-								}}
-							>
-								{item.name.charAt(0)}
-							</ThemedText>
-						</View>
-						<ThemedView style={styles.contactCard}>
-							<ThemedText>{item.name}</ThemedText>
-						</ThemedView>
-					</>
-					<Link href={item.link}>
-						<ThemedIcon name="external-link" size={20} />
-					</Link>
-				</ThemedView>
+				<Link
+					href={item.link}
+					key={index}
+					style={[styles.contactContainer, { borderColor: item.color }]}
+				>
+					<ThemedView
+						style={[styles.contactCircle, { backgroundColor: item.color }]}
+					>
+						<ThemedIcon name={item.localIcon} size={20} color="white" />
+					</ThemedView>
+					<ThemedView style={styles.contactCardText}>
+						<ThemedText type="subtitle">{item.name}</ThemedText>
+					</ThemedView>
+					<ThemedView style={styles.contactCardIcon}>
+						<ThemedIcon name="rocket-launch" size={20} color={item.color} />
+					</ThemedView>
+				</Link>
 			))}
 		</ThemedView>
 	);

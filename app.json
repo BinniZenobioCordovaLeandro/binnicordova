@@ -2,10 +2,10 @@
 	"expo": {
 		"name": "binni-cordova",
 		"slug": "binni-cordova",
-		"version": "1.0.0",
+		"version": "1.0.1",
 		"orientation": "portrait",
 		"icon": "./assets/images/icon.png",
-		"scheme": "myapp",
+		"scheme": "binnicordova",
 		"userInterfaceStyle": "automatic",
 		"newArchEnabled": true,
 		"ios": {
@@ -20,10 +20,17 @@
 		"web": {
 			"bundler": "metro",
 			"output": "single",
-			"favicon": "./assets/images/favicon.png"
+			"favicon": "./assets/images/react-logo.png"
 		},
 		"plugins": [
-			"expo-router",
+			[
+				"expo-router",
+				{
+					"sitemap": true,
+					"root": "./app",
+					"platformRoutes": true
+				}
+			],
 			[
 				"expo-splash-screen",
 				{

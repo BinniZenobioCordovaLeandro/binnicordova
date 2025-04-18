@@ -6,9 +6,18 @@
 				"id": 1,
 				"name": "NFL",
 				"region": "USA",
-				"links": ["https://www.nfl.com/apps/", "https://www.nfl.com/apps/ctv"],
+				"links": {
+					"android": "https://www.nfl.com/apps/",
+					"television": "https://www.nfl.com/apps/ctv"
+				},
 				"description": "I added new features to the NFL Mobile Apps and CTV Apps",
-				"technologies": ["Expo", "React Native", "TypeScript"],
+				"technologies": [
+					"Expo",
+					"React Native",
+					"web",
+					"TvOS",
+					"TypeScript"
+				],
 				"photos": [
 					"https://static.www.nfl.com/image/upload/t_q-best/league/ckxtgph6p3hmqzx0kvdp",
 					"https://play-lh.googleusercontent.com/jM2MwQ2IUyqxTpeqA6DZQvqTtWuWis5v9onVrMums_LbcFBUtqoheofHd4WLSWsy3g8=w526-h296-rw",
@@ -24,12 +33,15 @@
 				"id": 2,
 				"name": "ITÙ Bank",
 				"region": "Chile",
-				"links": [
-					"https://apps.apple.com/us/app/itu-cuenta-corriente-digital/id1620586910",
-					"https://play.google.com/store/apps/details?id=cl.itau.itu&hl=en"
-				],
+				"links": {
+					"apple": "https://apps.apple.com/us/app/itu-cuenta-corriente-digital/id1620586910",
+					"android": "https://play.google.com/store/apps/details?id=cl.itau.itu&hl=en"
+				},
 				"description": "I develop the ReactNative ITU app, Cuenta Corriente 100% digital",
-				"technologies": ["React Native", "TypeScript"],
+				"technologies": [
+					"React Native Cli",
+					"TypeScript"
+				],
 				"photos": [
 					"https://play-lh.googleusercontent.com/BONsjjn4CZB1meHqgXpLLerP__gepM1WmYI95bvdVljT46faitIz8lENzPJ4HjufdqA=w1052-h592-rw",
 					"https://play-lh.googleusercontent.com/7VBzFOdya99GI3NTIdTax4VLMnJmu2mCRJYIxN_IqomvZ_Fr2sVs2zndxnyBYuu1xs8=w526-h296-rw",
@@ -44,12 +56,17 @@
 				"id": 3,
 				"name": "Platanitos Ecommerce",
 				"region": "Perú",
-				"links": [
-					"https://apps.apple.com/pe/app/platanitos/id1093153586",
-					"https://play.google.com/store/apps/details?id=com.platanitos.platanitosapp"
-				],
+				"links": {
+					"apple": "https://apps.apple.com/pe/app/platanitos/id1093153586",
+					"android": "https://play.google.com/store/apps/details?id=com.platanitos.platanitosapp"
+				},
 				"description": "Manage and create the ReactNative Platanitos App, E-commerce Retail",
-				"technologies": ["React Native", "Expo", "TypeScript", "AWS"],
+				"technologies": [
+					"React Native",
+					"Expo",
+					"TypeScript",
+					"AWS"
+				],
 				"photos": [
 					"https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/75/f2/c6/75f2c603-9216-8f24-89ad-2acb22775b68/bc673aa6-5351-4460-b860-7148fa7622f2_Ipad_2.jpg/626x0w.webp",
 					"https://play-lh.googleusercontent.com/ny7qHTVl4KFI8xHaRsz_ubqY91GRoYL-B9z9UTkYQWtQbg2fZlQAyqgymolSpoX4Uw=w2560-h1440-rw",
@@ -67,42 +84,52 @@
 				"name": "Expo",
 				"level": "Intermediate",
 				"icon": "https://www.svgrepo.com/show/341805/expo.svg",
-				"link": "https://expo.dev/"
+				"link": "https://expo.dev/",
+				"color": "#808080"
 			},
 			{
 				"id": 2,
 				"name": "React Native",
 				"level": "Advanced",
 				"icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
-				"link": "https://reactnative.dev/"
+				"localIcon": "react",
+				"link": "https://reactnative.dev/",
+				"color": "#61DAFB"
 			},
 			{
 				"id": 3,
 				"name": "TypeScript",
 				"level": "Advanced",
 				"icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
-				"link": "https://www.typescriptlang.org/"
+				"localIcon": "language-typescript",
+				"link": "https://www.typescriptlang.org/",
+				"color": "#3178C6"
 			},
 			{
 				"id": 4,
 				"name": "AWS",
 				"level": "Intermediate",
 				"icon": "https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/aws-icon.png",
-				"link": "https://aws.amazon.com/"
+				"localIcon": "aws",
+				"link": "https://aws.amazon.com/",
+				"color": "#FF9900"
 			},
 			{
 				"id": 5,
 				"name": "Mobile Development",
 				"level": "Advanced",
 				"icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/apple/apple-original.svg",
-				"link": "https://developer.android.com/"
+				"localIcon": "apple",
+				"link": "https://developer.android.com/",
+				"color": "#A2AAAD"
 			},
 			{
 				"id": 6,
 				"name": "Cross Platform",
 				"level": "Advanced",
 				"icon": "https://refactoring.guru/images/content-public/logos/logo-new-winter-2x.png?id=f038fc3f89470da5a11245482c5e75c1",
-				"link": "https://refactoring.guru/"
+				"link": "https://refactoring.guru/",
+				"color": "#FF6347"
 			}
 		],
 		"contacts": [
@@ -110,19 +137,29 @@
 				"id": 2,
 				"name": "WhatsApp",
 				"color": "#25D366",
-				"link": "https://web.whatsapp.com/send?phone=51971581847"
+				"link": "https://web.whatsapp.com/send?phone=51971581847",
+				"localIcon": "whatsapp"
 			},
 			{
 				"id": 4,
 				"name": "LinkedIn",
 				"color": "#0072b1",
-				"link": "https://www.linkedin.com/in/binni-zenobio-leandro-a77000175/"
+				"link": "https://www.linkedin.com/in/binni-zenobio-leandro-a77000175/",
+				"localIcon": "linkedin"
 			},
 			{
 				"id": 5,
 				"name": "Calendar",
-				"color": "#34A853",
-				"link": "https://calendly.com/binnizenobiocordovaleandro/meet"
+				"color": "#FF7F50",
+				"link": "https://calendly.com/binnizenobiocordovaleandro/meet",
+				"localIcon": "calendar"
+			},
+			{
+				"id": 6,
+				"name": "GitHub",
+				"color": "#808080",
+				"link": "https://github.com/binnizenobiocordovaleandro",
+				"localIcon": "github"
 			}
 		]
 	}

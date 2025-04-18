@@ -2,8 +2,10 @@ import Carousel from "@/components/Carousel";
 import { ThemedIcon } from "@/components/ThemedIcon";
 import { ThemedText } from "@/components/ThemedText";
 import { ThemedView } from "@/components/ThemedView";
+import { spacing } from "@/constants/Spacings";
 import { useData } from "@/hooks/useData";
 import { styles } from "@/styles";
+import { calculateYear } from "@/utils/date";
 import { Link } from "expo-router";
 import React from "react";
 import { Image, Pressable } from "react-native";
@@ -16,21 +18,14 @@ const Projects = () => {
 		<ThemedView style={[styles.page, styles.page2]} key="2">
 			<ThemedText type="title">Projects</ThemedText>
 			<ThemedView>
-				{projects.map((rowData, index) => {
+				{projects.map((rowData) => {
 					const name = rowData.name;
 					const description = rowData.description;
-					const calculateYear = (start: string, end: string) => {
-						const startDate = new Date(start);
-						const endDate = end ? new Date(end) : new Date();
-						const years = endDate.getFullYear() - startDate.getFullYear();
-						const months = endDate.getMonth() - startDate.getMonth();
-						return Math.round(years + months / 12);
-					};
 					const isFocused = focused === rowData.id;
 					const years = calculateYear(rowData.start, rowData.end);
 					return (
 						<Pressable
-							key={index}
+							key={rowData.id}
 							onPress={() => {
 								setFocused(rowData.id);
 							}}
@@ -58,14 +53,20 @@ const Projects = () => {
 										</ThemedView>
 									</ThemedView>
 									<ThemedText type="caption">
-										Technologies: {rowData.technologies.join(", ")}
+										Skills: {rowData.technologies.join(", ")}
 									</ThemedText>
-									<ThemedView style={{ flexDirection: "row" }}>
+									<ThemedView
+										style={{
+											flexDirection: "row",
+											alignItems: "center",
+											marginVertical: spacing[2],
+										}}
+									>
 										<ThemedText type="caption">Demo: </ThemedText>
-										{rowData.links.map((link) => (
-											<Link href={link} key={link}>
+										{Object.entries(rowData.links).map(([platform, url]) => (
+											<Link href={url} key={platform}>
 												<ThemedView style={styles.linkCard}>
-													<ThemedIcon name="external-link" size={8} />
+													<ThemedIcon name={platform} size={12} />
 												</ThemedView>
 											</Link>
 										))}

@@ -18,6 +18,7 @@ export default function RootLayout() {
 	const colorScheme = useColorScheme();
 	const [loaded] = useFonts({
 		SpaceMono: require("../assets/fonts/SpaceMono-Regular.ttf"),
+		MaterialCommunityIcons: require("../assets/fonts/MaterialCommunityIcons.ttf"),
 	});
 
 	useEffect(() => {
@@ -84,7 +85,7 @@ const styles = StyleSheet.create({
 		width: "100%",
 		height: "100%",
 		flex: 1,
-		borderRadius: 40,
+		borderRadius: 50,
 		overflow: "hidden",
 	},
 });
