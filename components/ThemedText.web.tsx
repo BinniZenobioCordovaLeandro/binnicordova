@@ -1,6 +1,13 @@
 import { useThemeColor } from "@/hooks/useThemeColor";
-import { A, B, H1, H2, I, P } from "@expo/html-elements";
-import { StyleSheet, Text, type TextProps } from "react-native";
+import { A, H1, H2, P, Span, Strong } from "@expo/html-elements";
+import {
+	Platform,
+	type StyleProp,
+	StyleSheet,
+	Text,
+	type TextProps,
+	type TextStyle,
+} from "react-native";
 
 export type ThemedTextProps = TextProps & {
 	lightColor?: string;
@@ -23,39 +30,35 @@ export function ThemedText({
 }: ThemedTextProps) {
 	const color = useThemeColor({ light: lightColor, dark: darkColor }, "text");
 
-	const componentMap = {
-		default: P,
-		defaultSemiBold: B,
-		title: H1,
-		subtitle: H2,
-		link: A,
-		caption: I,
-	};
+	const textStyles: StyleProp<TextStyle> = [{ color }, styles[type], style];
 
-	const Component = componentMap[type] || Text;
+	if (Platform.OS !== "web") {
+		return <Text style={textStyles} {...rest} />;
+	}
 
-	return (
-		<Component
-			style={[
-				[{ color }, styles.base],
-				type === "default" ? styles.default : undefined,
-				type === "title" ? styles.title : undefined,
-				type === "subtitle" ? styles.subtitle : undefined,
-				type === "defaultSemiBold" ? styles.defaultSemiBold : undefined,
-				type === "link" ? styles.link : undefined,
-				type === "caption" ? styles.caption : undefined,
-				style,
-			]}
-			{...rest}
-		/>
-	);
+	switch (type) {
+		case "default":
+			return <P style={textStyles} {...rest} />;
+		case "title":
+			return <H1 style={textStyles} {...rest} />;
+		case "subtitle":
+			return <H2 style={textStyles} {...rest} />;
+		case "link":
+			return <A style={textStyles} {...rest} />;
+		case "caption":
+			return <Span style={textStyles} {...rest} />;
+		case "defaultSemiBold":
+			return (
+				<P style={textStyles} {...rest}>
+					<Strong>{rest.children}</Strong>
+				</P>
+			);
+		default:
+			return <P style={textStyles} {...rest} />;
+	}
 }
 
 const styles = StyleSheet.create({
-	base: {
-		marginBottom: 0,
-		marginTop: 0,
-	},
 	default: {
 		fontSize: 16,
 		lineHeight: 24,
@@ -68,11 +71,17 @@ const styles = StyleSheet.create({
 	title: {
 		fontSize: 28,
 		fontWeight: "bold",
-		
+		lineHeight: 28,
+		marginTop: 0,
+		marginBottom: 0,
+		wordWrap: "break-word",
 	},
 	subtitle: {
 		fontSize: 20,
 		fontWeight: "bold",
+		marginTop: 0,
+		marginBottom: 0,
+		wordWrap: "break-word",
 	},
 	link: {
 		lineHeight: 30,
@@ -82,6 +91,5 @@ const styles = StyleSheet.create({
 	caption: {
 		fontSize: 12,
 		lineHeight: 16,
-		fontStyle: "normal",
 	},
 });

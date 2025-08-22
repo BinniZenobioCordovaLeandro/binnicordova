@@ -21,8 +21,25 @@ const Home = () => {
 			/>
 			<ThemedView style={styles.cardIdentity}>
 				<ThemedText type="subtitle">Hi, I'm </ThemedText>
-				<ThemedText type="title">Binni Cordova</ThemedText>
+				<ThemedText type="title" id="main-heading">
+					Binni Cordova
+				</ThemedText>
 				<ThemedText type="subtitle">Expert Mobile Developer</ThemedText>
+				<ThemedView
+					style={{ visibility: "hidden", marginTop: 10, display: "none" }}
+					accessibilityRole="summary"
+					nativeID="tldr"
+				>
+					<ThemedText>
+						I design & ship high-performance cross-platform mobile apps (iOS /
+						Android) using React Native & Expo: faster startups, smoother video,
+						secure onboarding, and resilient delivery pipelines.
+					</ThemedText>
+					<ThemedText>
+						Core strengths: performance optimization, scalable architecture,
+						CI/CD, secure auth, and measurable product impact.
+					</ThemedText>
+				</ThemedView>
 			</ThemedView>
 		</ThemedView>
 	);

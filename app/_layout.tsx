@@ -9,9 +9,8 @@ import { Slot } from "expo-router";
 import * as SplashScreen from "expo-splash-screen";
 import { StatusBar } from "expo-status-bar";
 import { useEffect } from "react";
-import { Dimensions, Image, StyleSheet, View } from "react-native";
+import { Image, StyleSheet, View, useWindowDimensions } from "react-native";
 
-// Prevent the splash screen from auto-hiding before asset loading is complete.
 SplashScreen.preventAutoHideAsync();
 
 export default function RootLayout() {
@@ -20,6 +19,7 @@ export default function RootLayout() {
 		SpaceMono: require("../assets/fonts/SpaceMono-Regular.ttf"),
 		MaterialCommunityIcons: require("../assets/fonts/MaterialCommunityIcons.ttf"),
 	});
+	const { width } = useWindowDimensions();
 
 	useEffect(() => {
 		if (loaded) {
@@ -31,7 +31,7 @@ export default function RootLayout() {
 		return null;
 	}
 
-	const isBigScreen = Dimensions.get("window").width > 600;
+	const isBigScreen = width > 600;
 
 	if (!isBigScreen) {
 		return (

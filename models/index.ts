@@ -3,8 +3,11 @@ export type Project = {
 	name: string;
 	region: string;
 	links: {
-		android: string;
-		television: string;
+		android?: string;
+		television?: string;
+		web?: string;
+		apple?: string;
+		[key: string]: string | undefined;
 	};
 	description: string;
 	technologies: string[];
@@ -31,4 +34,10 @@ export type Contact = {
 	color: string;
 	link: string;
 	localIcon: string;
+};
+
+export type FAQ = {
+	id: number;
+	question: string;
+	answer: string;
 };

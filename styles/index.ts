@@ -15,7 +15,7 @@ export const styles = StyleSheet.create({
 	},
 	title: {
 		paddingVertical: spacing[2],
-		paddingBottom: spacing[6],
+		paddingBottom: spacing[4],
 	},
 	page1: {
 		justifyContent: "flex-end",
@@ -34,8 +34,9 @@ export const styles = StyleSheet.create({
 		width: "100%",
 		alignItems: "center",
 		borderRadius: radius[1],
-		borderWidth: 1,
+		borderWidth: 0,
 		marginBottom: spacing[4],
+		backgroundColor: "#FFFFFF20",
 	},
 	identityImage: {
 		height: "50%",
@@ -54,9 +55,15 @@ export const styles = StyleSheet.create({
 	timelineContent: {
 		padding: spacing[2],
 	},
+	floating: {
+		position: "absolute",
+		top: 10,
+		right: 10,
+		zIndex: 1,
+	},
 	carouselContainer: {
 		width: "100%",
-		height: 150,
+		aspectRatio: 16 / 9,
 		marginBottom: 10,
 		overflow: "hidden",
 	},
@@ -65,12 +72,17 @@ export const styles = StyleSheet.create({
 		height: 20,
 		borderRadius: radius[1],
 	},
+	iconTimelineCardContainer: {
+		flex: 0.2,
+		marginRight: spacing[3],
+		marginBottom: spacing[3],
+		alignItems: "center",
+	},
 	iconTimelineCard: {
 		width: 50,
 		height: 50,
+		aspectRatio: 1 / 1,
 		borderRadius: radius[1],
-		marginRight: spacing[3],
-		marginBottom: spacing[3],
 	},
 	linkCard: {
 		padding: spacing[1],
@@ -104,7 +116,7 @@ export const styles = StyleSheet.create({
 		marginBottom: spacing[3],
 		borderWidth: 2,
 		borderRadius: radius[1],
-		paddingHorizontal: spacing[2],
+		padding: spacing[2],
 		justifyContent: "space-between",
 	},
 	contactCircle: {

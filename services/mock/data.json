@@ -4,19 +4,20 @@
 		"projects": [
 			{
 				"id": 1,
-				"name": "NFL",
+				"name": "NFL+ Apps",
 				"region": "USA",
 				"links": {
 					"android": "https://www.nfl.com/apps/",
-					"television": "https://www.nfl.com/apps/ctv"
+					"television": "https://www.nfl.com/apps/ctv",
+					"web": "https://nfl.com/"
 				},
-				"description": "I added new features to the NFL Mobile Apps and CTV Apps",
+				"description": "Optimized NFL+ apps for millions with cross-platform video player.",
 				"technologies": [
-					"Expo",
 					"React Native",
-					"web",
-					"TvOS",
-					"TypeScript"
+					"Recoil",
+					"TypeScript",
+					"Expo",
+					"JavaScript"
 				],
 				"photos": [
 					"https://static.www.nfl.com/image/upload/t_q-best/league/ckxtgph6p3hmqzx0kvdp",
@@ -25,47 +26,45 @@
 					"https://play-lh.googleusercontent.com/jnW4TAvwVrC7sEMA7hbHJY_Dvm8t44kAOSHjwGXECb-3mPj8LxYZ4Idhuyk_yiD03A=w526-h296-rw"
 				],
 				"icon": "https://static.www.nfl.com/image/upload/t_photogallery/f_png/league/zr8ekkybvobvoeoj2gsw.png",
-				"time": "2024-02-01",
+				"time": "2025-05-01",
 				"start": "2024-02-01",
-				"end": null
+				"end": "2025-05-01"
 			},
 			{
 				"id": 2,
-				"name": "ITÙ Bank",
+				"name": "Itù App",
 				"region": "Chile",
 				"links": {
-					"apple": "https://apps.apple.com/us/app/itu-cuenta-corriente-digital/id1620586910",
-					"android": "https://play.google.com/store/apps/details?id=cl.itau.itu&hl=en"
+					"apple": "https://apps.apple.com/cl/app/itu-cuenta-corriente-digital/id1620586910",
+					"android": "https://play.google.com/store/apps/details?id=cl.itau.itu"
 				},
-				"description": "I develop the ReactNative ITU app, Cuenta Corriente 100% digital",
-				"technologies": [
-					"React Native Cli",
-					"TypeScript"
-				],
+				"description": "Secure onboarding and biometrics for Itaú's digital banking app.",
+				"technologies": ["React Native", "TypeScript", "Firebase", "AWS"],
 				"photos": [
 					"https://play-lh.googleusercontent.com/BONsjjn4CZB1meHqgXpLLerP__gepM1WmYI95bvdVljT46faitIz8lENzPJ4HjufdqA=w1052-h592-rw",
 					"https://play-lh.googleusercontent.com/7VBzFOdya99GI3NTIdTax4VLMnJmu2mCRJYIxN_IqomvZ_Fr2sVs2zndxnyBYuu1xs8=w526-h296-rw",
 					"https://play-lh.googleusercontent.com/NlNjVMJcNMJG25ooZVQS9cYJ6a92anE5kVhfWt7ru4qHPlsnh-PyodhdgTA6EJW_8y9b=w526-h296-rw"
 				],
 				"icon": "https://play-lh.googleusercontent.com/ZRz315ZIKPOrXftRiEFchD9Un7slS0e-rsOzK3zU8ux41nKVrnnCiu75Wd8fQtooq0Y=w480-h960-rw",
-				"time": "2021-12-01",
+				"time": "2024-02-01",
 				"start": "2021-12-01",
 				"end": "2024-02-01"
 			},
 			{
 				"id": 3,
-				"name": "Platanitos Ecommerce",
+				"name": "Platanitos App",
 				"region": "Perú",
 				"links": {
-					"apple": "https://apps.apple.com/pe/app/platanitos/id1093153586",
+					"apple": "https://apps.apple.com/app/id1093153586",
 					"android": "https://play.google.com/store/apps/details?id=com.platanitos.platanitosapp"
 				},
-				"description": "Manage and create the ReactNative Platanitos App, E-commerce Retail",
+				"description": "Created Platanitos app using React Native with seamless purchase flow.",
 				"technologies": [
 					"React Native",
 					"Expo",
 					"TypeScript",
-					"AWS"
+					"AWS",
+					"Firebase"
 				],
 				"photos": [
 					"https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/75/f2/c6/75f2c603-9216-8f24-89ad-2acb22775b68/bc673aa6-5351-4460-b860-7148fa7622f2_Ipad_2.jpg/626x0w.webp",
@@ -73,7 +72,7 @@
 					"https://play-lh.googleusercontent.com/7H0tVp--A0Ug1UUMCM8W930G7UQFj8oWYExVGs3q81s9xj73c6s6jFPjBHiv4hgWwA=w2560-h1440-rw"
 				],
 				"icon": "https://play-lh.googleusercontent.com/rVS8NCHYpmuLXUIFxoyFom8yDMHoxNFrPUgSjFex-Co3K4wv5ch2NHlnST8X1nSLu3Jt=w480-h960-rw",
-				"time": "2019-03-01",
+				"time": "2021-12-01",
 				"start": "2019-03-01",
 				"end": "2021-12-01"
 			}
@@ -81,70 +80,107 @@
 		"skills": [
 			{
 				"id": 1,
-				"name": "Expo",
-				"level": "Intermediate",
-				"icon": "https://www.svgrepo.com/show/341805/expo.svg",
-				"link": "https://expo.dev/",
-				"color": "#808080"
-			},
-			{
-				"id": 2,
 				"name": "React Native",
 				"level": "Advanced",
-				"icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
 				"localIcon": "react",
 				"link": "https://reactnative.dev/",
 				"color": "#61DAFB"
 			},
 			{
-				"id": 3,
+				"id": 2,
 				"name": "TypeScript",
 				"level": "Advanced",
-				"icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
 				"localIcon": "language-typescript",
 				"link": "https://www.typescriptlang.org/",
 				"color": "#3178C6"
 			},
 			{
+				"id": 3,
+				"name": "JavaScript",
+				"level": "Advanced",
+				"localIcon": "language-javascript",
+				"link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+				"color": "#F7DF1E"
+			},
+			{
 				"id": 4,
+				"name": "CI/CD",
+				"level": "Advanced",
+				"localIcon": "rocket-launch-outline",
+				"link": "https://en.wikipedia.org/wiki/CI/CD",
+				"color": "#808080"
+			},
+			{
+				"id": 5,
+				"name": "Automated Testing",
+				"level": "Intermediate",
+				"localIcon": "robot-outline",
+				"link": "https://en.wikipedia.org/wiki/Software_testing",
+				"color": "#FF5733"
+			},
+			{
+				"id": 6,
+				"name": "Firebase",
+				"level": "Intermediate",
+				"localIcon": "firebase",
+				"link": "https://firebase.google.com/",
+				"color": "#FFCA28"
+			},
+			{
+				"id": 7,
 				"name": "AWS",
 				"level": "Intermediate",
-				"icon": "https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/aws-icon.png",
 				"localIcon": "aws",
 				"link": "https://aws.amazon.com/",
 				"color": "#FF9900"
 			},
 			{
-				"id": 5,
-				"name": "Mobile Development",
-				"level": "Advanced",
-				"icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/apple/apple-original.svg",
-				"localIcon": "apple",
-				"link": "https://developer.android.com/",
-				"color": "#A2AAAD"
+				"id": 8,
+				"name": "GraphQL",
+				"level": "Intermediate",
+				"localIcon": "graphql",
+				"link": "https://graphql.org/",
+				"color": "#E10098"
 			},
 			{
-				"id": 6,
-				"name": "Cross Platform",
-				"level": "Advanced",
-				"icon": "https://refactoring.guru/images/content-public/logos/logo-new-winter-2x.png?id=f038fc3f89470da5a11245482c5e75c1",
-				"link": "https://refactoring.guru/",
-				"color": "#FF6347"
+				"id": 9,
+				"name": "Mobile Security",
+				"level": "Intermediate",
+				"localIcon": "shield-lock-outline",
+				"link": "https://en.wikipedia.org/wiki/Mobile_security",
+				"color": "#4CAF50"
+			},
+			{
+				"id": 10,
+				"name": "UI/UX",
+				"level": "Intermediate",
+				"localIcon": "palette-swatch-outline",
+				"link": "https://en.wikipedia.org/wiki/User_interface_design",
+				"color": "#FF5722"
+			},
+			{
+				"id": 11,
+				"name": "Performance Optimization",
+				"level": "Intermediate",
+				"localIcon": "speedometer",
+				"link": "https://en.wikipedia.org/wiki/Performance_engineering",
+				"color": "#2196F3"
+			},
+			{
+				"id": 12,
+				"name": "Observability Tools",
+				"level": "Intermediate",
+				"localIcon": "binoculars",
+				"link": "https://en.wikipedia.org/wiki/Observability",
+				"color": "#9C27B0"
 			}
 		],
 		"contacts": [
 			{
-				"id": 2,
-				"name": "WhatsApp",
-				"color": "#25D366",
-				"link": "https://web.whatsapp.com/send?phone=51971581847",
-				"localIcon": "whatsapp"
-			},
-			{
 				"id": 4,
 				"name": "LinkedIn",
 				"color": "#0072b1",
-				"link": "https://www.linkedin.com/in/binni-zenobio-leandro-a77000175/",
+				"link": "https://www.linkedin.com/in/binni-cordova-a77000175/",
 				"localIcon": "linkedin"
 			},
 			{
@@ -160,6 +196,42 @@
 				"color": "#808080",
 				"link": "https://github.com/binnizenobiocordovaleandro",
 				"localIcon": "github"
+			},
+			{
+				"id": 7,
+				"name": "Email",
+				"color": "#FF5722",
+				"link": "mailto:binnizenobiocordovaleandro@gmail.com",
+				"localIcon": "email"
+			},
+			{
+				"id": 8,
+				"name": "Phone",
+				"color": "#4CAF50",
+				"link": "tel:+1-650-374-4225",
+				"localIcon": "phone"
+			}
+		],
+		"faqs": [
+			{
+				"id": 1,
+				"question": "What React Native performance issues do you solve?",
+				"answer": "Startup time, bundle size, over-rendering, animation/video jank, network latency, memory leaks."
+			},
+			{
+				"id": 2,
+				"question": "How do you ensure scalable architecture?",
+				"answer": "Feature-driven modules, typed API layer, design system tokens, CI gates (tests, lint, performance budgets)."
+			},
+			{
+				"id": 3,
+				"question": "Do you work with native modules?",
+				"answer": "Yes—bridges for video, biometric auth, secure storage, performance-critical device APIs."
+			},
+			{
+				"id": 4,
+				"question": "What deployment and CI/CD tools do you use?",
+				"answer": "EAS, Fastlane, GitHub Actions, phased rollouts, automated smoke + end-to-end tests."
 			}
 		]
 	}

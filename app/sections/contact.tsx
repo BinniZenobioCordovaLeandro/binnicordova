@@ -16,19 +16,25 @@ const Contact = () => {
 				<Link
 					href={item.link}
 					key={index}
-					style={[styles.contactContainer, { borderColor: item.color }]}
+					style={[
+						styles.contactContainer,
+						{ borderColor: item.color, backgroundColor: `${item.color}20` },
+					]}
 				>
 					<ThemedView
 						style={[styles.contactCircle, { backgroundColor: item.color }]}
 					>
 						<ThemedIcon name={item.localIcon} size={20} color="white" />
 					</ThemedView>
-					<ThemedView style={styles.contactCardText}>
-						<ThemedText type="subtitle">{item.name}</ThemedText>
-					</ThemedView>
-					<ThemedView style={styles.contactCardIcon}>
-						<ThemedIcon name="rocket-launch" size={20} color={item.color} />
-					</ThemedView>
+					<ThemedText type="subtitle" style={styles.contactCardText}>
+						{item.name}
+					</ThemedText>
+					<ThemedIcon
+						name="cursor-default-click"
+						size={20}
+						color={item.color}
+						style={styles.floating}
+					/>
 				</Link>
 			))}
 		</ThemedView>

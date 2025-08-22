@@ -1,6 +1,8 @@
-
-
 User-agent: *
 Allow: /
 
 Sitemap: https://binnicordova.com/sitemap.xml
+Host: binnicordova.com
+
+# Optional: block source maps if ever published
+Disallow: /*.map$

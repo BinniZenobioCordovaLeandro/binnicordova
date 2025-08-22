@@ -17,29 +17,38 @@ const Skills = () => {
 					flexDirection: "row",
 					flexWrap: "wrap",
 					justifyContent: "space-between",
+					alignItems: "center",
+					paddingHorizontal: 10,
 				}}
 			>
 				{skills.map((item, index) => (
 					<ThemedView
-						style={[styles.skillCard, { borderColor: item.color }]}
+						style={{
+							width: "30%",
+							aspectRatio: 1,
+							backgroundColor: `${item.color}20`,
+							marginVertical: 10,
+							padding: 15,
+							justifyContent: "center",
+							alignItems: "center",
+							borderRadius: 10,
+						}}
 						key={index}
 					>
-						<ThemedView style={{ flex: 1 }}>
-							<ThemedText type="subtitle">{item.name}</ThemedText>
-							<ThemedText type="caption">{item.level} level</ThemedText>
-						</ThemedView>
+						<ThemedText type="caption" style={{ textAlign: "center" }}>
+							{item.name}
+						</ThemedText>
 						{item.localIcon ? (
 							<ThemedIcon
-								name={item.localIcon}
-								size={100}
-								style={styles.skillImage}
+								name={item.localIcon as any}
+								size={40}
 								color={item.color}
 							/>
 						) : (
 							<Image
-								resizeMode="stretch"
+								resizeMode="contain"
 								source={{ uri: item.icon }}
-								style={styles.skillImage}
+								style={{ width: 40, height: 40 }}
 							/>
 						)}
 					</ThemedView>

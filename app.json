@@ -2,7 +2,7 @@
 	"expo": {
 		"name": "binni-cordova",
 		"slug": "binni-cordova",
-		"version": "1.0.1",
+		"version": "1.0.2",
 		"orientation": "portrait",
 		"icon": "./assets/images/icon.png",
 		"scheme": "binnicordova",
@@ -40,7 +40,9 @@
 					"backgroundColor": "#ffffff"
 				}
 			],
-			"expo-asset"
+			"expo-asset",
+			"expo-font",
+			"expo-web-browser"
 		],
 		"experiments": {
 			"typedRoutes": true
