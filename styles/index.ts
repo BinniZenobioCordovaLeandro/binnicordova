@@ -8,7 +8,7 @@ export const styles = StyleSheet.create({
 	page: {
 		height: isBigScreen ? "100%" : Dimensions.get("window").height,
 		width: isBigScreen ? undefined : Dimensions.get("window").width,
-		aspectRatio: isBigScreen ? 7.38 / 16 : undefined,
+		aspectRatio: isBigScreen ? 1 / 2.9 : undefined,
 		justifyContent: "flex-start",
 		alignItems: "center",
 		padding: spacing[2],

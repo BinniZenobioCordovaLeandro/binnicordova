@@ -48,7 +48,7 @@ export default function RootLayout() {
 			<View style={styles.contentContainer}>
 				<Image
 					style={styles.backgroundImage}
-					source={require("../assets/images/background.jpg")}
+					source={require("../assets/images/background.png")}
 				/>
 				<View style={styles.overImagePhone}>
 					<View style={styles.contentSkin}>
@@ -75,17 +75,25 @@ const styles = StyleSheet.create({
 	},
 	overImagePhone: {
 		position: "absolute",
-		top: "6%",
+		top: "13%",
 		justifyContent: "center",
 		alignItems: "center",
-		height: "80%",
-		aspectRatio: 7.38 / 16,
+		height: "87%",
+		aspectRatio: 1 / 2.9,
+		transform: [
+			{ translateX: "49%" },
+			{ perspective: 800 },
+			{ rotateY: "19deg" },
+			{ scale: 0.93 },
+			{ skewY: "8deg" },
+			{ skewX: "0deg" },
+		],
 	},
 	contentSkin: {
 		width: "100%",
 		height: "100%",
 		flex: 1,
-		borderRadius: 50,
+		borderRadius: 40,
 		overflow: "hidden",
 	},
 });
